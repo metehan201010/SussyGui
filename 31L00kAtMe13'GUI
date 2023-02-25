@@ -1,0 +1,812 @@
+
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "script",
+   LoadingTitle = "Universal GUI",
+   LoadingSubtitle = "by 31L00kAtMe13",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "31L00kAtMe13`s Doors Hub",
+      Subtitle = "Key System",
+      Note = "Sussy UI",
+      FileName = "SiriusKey",
+      SaveKey = true,
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = "31LAM13"
+   }
+})
+
+local LocalP = Window:CreateTab("binsad", 4483362458) -- Title, Image
+
+local Button = LocalP:CreateButton({
+    Name = "Size Changer ",
+    Callback = function()
+    -- Variables
+ 
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+ 
+-- Settings
+ 
+local SizeChange = 0
+local Camera = -30
+bind = "r"
+ 
+mouse.KeyDown:connect(function(key)
+    if key == bind then
+        SizeChange = SizeChange - 0.1
+    end
+end)
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+    if v:IsA("MeshPart") then
+        v.Transparency = 1
+    end
+    if v:IsA("Part") then
+        v.Transparency = 1
+    end
+    if v:IsA("Accessory") then
+        v:Destroy()
+    end
+    game.Players.LocalPlayer.Character.Head.face.Transparency = 1
+end
+local Con = game:GetService("RunService").RenderStepped:Connect(function()
+    game.Workspace.CurrentCamera.CFrame = (game.Players.LocalPlayer.Character.Head.CFrame * CFrame.Angles(math.rad(Camera),0,0)) * CFrame.new(0,SizeChange,0)
+end)
+
+
+
+ 
+
+     end,
+
+ })
+
+ local Button = LocalP:CreateButton({
+    Name = "Tablet in Pre-Run Shop",
+    Callback = function()
+        _G.UpdateStars = false -- stars disappear after picking up a book/breaker pole | false: a little lag
+        _G.OnShop = true -- can buy on pre run shop
+        _G.Price = 10 -- tablet price on shop
+        _G.Description = "Sussy Description" -- tablet description on shop
+         
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/DeividComSono/Scripts/main/Scanner.lua'))()
+    end,
+ })
+ 
+ 
+  local Button = LocalP:CreateButton({
+    Name = "inf jack",
+    Callback = function()
+ loadstring(game:HttpGet('https://pastebin.com/raw/DdVvKbqP'))() 
+    end,
+ })
+
+  local Button = LocalP:CreateButton({
+    Name = "Hardcore Mod",
+    Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/plamen6789/HardcoreScriptDOORS/main/HardcoreModeScript'))()
+    end,
+ })
+ 
+   local Button = LocalP:CreateButton({
+    Name = "inf jack 2",
+    Callback = function()
+local UIS = game.UserInputService
+
+local Player = game.Players.LocalPlayer
+
+local Mouse = Player:GetMouse()
+
+
+local Spamming = false
+
+UIS.InputBegan:Connect(function(input, x)
+    if x then return end
+    if input.KeyCode == Enum.KeyCode.Q then
+        Spamming = not Spamming
+    end
+end)
+
+game:GetService("RunService").RenderStepped:Connect(function()
+    if Spamming then
+        if Mouse.Target.Parent.Name == "Wardrobe" then
+            fireproximityprompt(Mouse.Target.Parent.HidePrompt, 0)
+            fireproximityprompt(Mouse.Target.Parent.HidePrompt, 1)
+        end
+    end    
+end)
+    end,
+ })
+
+
+  local Button = LocalP:CreateButton({
+    Name = "Christmas",
+    Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/ZepsyyCodesLUA/Utilities/main/Doors/Christmas.lua'))()
+
+    end,
+ })
+
+
+ local Button = LocalP:CreateButton({
+    Name = "Doors Morph GUI",
+    Callback = function()
+        
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/RmdComunnityScriptsProvider/AngryHub/main/DoorsMorphScript.lua'))()
+    end,
+ })
+
+
+
+ local GUISS = Window:CreateTab("GUI`s", 4483362458) -- Title, Image
+
+
+ local Button = GUISS:CreateButton({
+    Name = "Vynixius GUI",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Loader.lua"))()
+    end,
+ })
+ 
+  local Button = GUISS:CreateButton({
+    Name = "Custom Roblox Editor",
+    Callback = function()
+      getgenv().DisableWebhook = false
+loadstring(game:HttpGet("https://eternityhub.xyz/HostStuff/JayzRoblox.lua"))()
+    end,
+ })
+
+  local Button = GUISS:CreateButton({
+    Name = "inf jack",
+    Callback = function()
+ loadstring(game:HttpGet('https://pastebin.com/raw/DdVvKbqP'))() 
+    end,
+ })
+
+
+
+local Button = GUISS:CreateButton({
+    Name = "poop",
+    Callback = function()
+     loadstring(game:HttpGet(("https://raw.githubusercontent.com/mstudio45/poopdoors_edited/main/poopdoors_edited.lua"),true))()
+    end,
+ })
+ 
+
+
+ local Button = GUISS:CreateButton({
+    Name = "Penguin GUI",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Mye123/MyeWareHub/main/Penguin%20Loader", true))()
+    end,
+ })
+
+
+ local Button = GUISS:CreateButton({
+    Name = "Stream Sniper",
+    Callback = function()
+      -- Old Version: https://raw.githubusercontent.com/Acrillis/SynapseX/master/Synapse%20Scripts/StreamSniper.lua
+local Screenguini = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local UsernameBox = Instance.new("TextBox")
+local TextLabel_3 = Instance.new("TextLabel")
+local PlaceIdBox = Instance.new("TextBox")
+local StartButton = Instance.new("TextButton")
+local TextLabel_4 = Instance.new("TextLabel")
+local UsernameLabel = Instance.new("TextLabel")
+local TextLabel_5 = Instance.new("TextLabel")
+local UserIdLabel = Instance.new("TextLabel")
+local GamerPicture = Instance.new("ImageLabel")
+
+local HttpService = game:GetService("HttpService")
+local Players = game:GetService("Players")
+local TeleportService = game:GetService("TeleportService")
+
+Screenguini.Name = HttpService:GenerateGUID(false)
+Screenguini.Parent = game:GetService("CoreGui")
+
+Frame.Parent = Screenguini
+Frame.Active = true
+Frame.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+Frame.BorderColor3 = Color3.fromRGB(31, 31, 31)
+Frame.Draggable = true
+Frame.Size = UDim2.new(0, 400, 0, 260)
+
+TextLabel.Parent = Frame
+TextLabel.Active = true
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+TextLabel.BorderColor3 = Color3.fromRGB(31, 31, 40)
+TextLabel.Size = UDim2.new(0, 400, 0, 40)
+TextLabel.Font = Enum.Font.SourceSansLight
+TextLabel.Text = "Synapse X Stream Sniper"
+TextLabel.TextSize = 24.000
+
+TextLabel_2.Parent = Frame
+TextLabel_2.Active = true
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+TextLabel_2.BorderColor3 = Color3.fromRGB(31, 31, 31)
+TextLabel_2.Position = UDim2.new(0, 10, 0, 49)
+TextLabel_2.Size = UDim2.new(0, 150, 0, 20)
+TextLabel_2.Font = Enum.Font.SourceSansLight
+TextLabel_2.Text = "Username/UserId:"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 16.000
+
+UsernameBox.Name = "UsernameBox"
+UsernameBox.Parent = Frame
+UsernameBox.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+UsernameBox.BorderColor3 = Color3.fromRGB(31, 31, 31)
+UsernameBox.Position = UDim2.new(0, 10, 0, 80)
+UsernameBox.Size = UDim2.new(0, 150, 0, 35)
+UsernameBox.Font = Enum.Font.SourceSansLight
+UsernameBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+UsernameBox.PlaceholderText = "Enter Username Here"
+UsernameBox.Text = ""
+UsernameBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+UsernameBox.TextSize = 18.000
+
+TextLabel_3.Parent = Frame
+TextLabel_3.Active = true
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+TextLabel_3.BorderColor3 = Color3.fromRGB(31, 31, 31)
+TextLabel_3.Position = UDim2.new(0, 10, 0, 130)
+TextLabel_3.Size = UDim2.new(0, 150, 0, 20)
+TextLabel_3.Font = Enum.Font.SourceSansLight
+TextLabel_3.Text = "Place Id:"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 16.000
+
+PlaceIdBox.Name = "PlaceIdBox"
+PlaceIdBox.Parent = Frame
+PlaceIdBox.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+PlaceIdBox.BorderColor3 = Color3.fromRGB(31, 31, 31)
+PlaceIdBox.Position = UDim2.new(0, 10, 0, 157)
+PlaceIdBox.Size = UDim2.new(0, 150, 0, 35)
+PlaceIdBox.Font = Enum.Font.SourceSansLight
+PlaceIdBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+PlaceIdBox.PlaceholderText = "Enter PlaceId Here"
+PlaceIdBox.Text = ""
+PlaceIdBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlaceIdBox.TextSize = 18.000
+
+StartButton.Name = "StartButton"
+StartButton.Parent = Frame
+StartButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+StartButton.BorderColor3 = Color3.fromRGB(31, 31, 31)
+StartButton.Position = UDim2.new(0, 10, 0, 210)
+StartButton.Size = UDim2.new(0, 380, 0, 40)
+StartButton.Font = Enum.Font.SourceSansLight
+StartButton.Text = "Start"
+StartButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+StartButton.TextSize = 24.000
+
+TextLabel_4.Parent = Frame
+TextLabel_4.Active = true
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(31, 31, 31)
+TextLabel_4.Position = UDim2.new(0, 200, 0, 49)
+TextLabel_4.Size = UDim2.new(0, 0, 0, 20)
+TextLabel_4.AutomaticSize = Enum.AutomaticSize.X
+TextLabel_4.Font = Enum.Font.SourceSansBold
+TextLabel_4.Text = "Username:"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 16.000
+TextLabel_4.TextWrapped = true
+TextLabel_4.TextXAlignment = Enum.TextXAlignment.Left
+
+UsernameLabel.Name = "UsernameLabel"
+UsernameLabel.Parent = TextLabel_4
+UsernameLabel.Active = true
+UsernameLabel.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+UsernameLabel.BackgroundTransparency = 1.000
+UsernameLabel.BorderColor3 = Color3.fromRGB(31, 31, 31)
+UsernameLabel.Position = UDim2.new(0.5, 0, 0, 0)
+UsernameLabel.Size = UDim2.new(0, 150, 0, 20)
+UsernameLabel.Font = Enum.Font.SourceSansLight
+UsernameLabel.Text = ""
+UsernameLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+UsernameLabel.TextSize = 16.000
+UsernameLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel_5.Parent = Frame
+TextLabel_5.Active = true
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderColor3 = Color3.fromRGB(31, 31, 31)
+TextLabel_5.Position = UDim2.new(0, 200, 0, 69)
+TextLabel_5.Size = UDim2.new(0, 0, 0, 20)
+TextLabel_5.AutomaticSize = Enum.AutomaticSize.X
+TextLabel_5.Font = Enum.Font.SourceSansBold
+TextLabel_5.Text = "UserId:"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextSize = 16.000
+TextLabel_5.TextWrapped = true
+TextLabel_5.TextXAlignment = Enum.TextXAlignment.Left
+
+UserIdLabel.Name = "UserIdLabel"
+UserIdLabel.Parent = TextLabel_5
+UserIdLabel.Active = true
+UserIdLabel.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+UserIdLabel.BackgroundTransparency = 1.000
+UserIdLabel.BorderColor3 = Color3.fromRGB(31, 31, 31)
+UserIdLabel.Position = UDim2.new(0.5, 0, 0, 0)
+UserIdLabel.Size = UDim2.new(0, 150, 0, 20)
+UserIdLabel.Font = Enum.Font.SourceSansLight
+UserIdLabel.Text = ""
+UserIdLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+UserIdLabel.TextSize = 16.000
+UserIdLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+GamerPicture.Name = "GamerPicture"
+GamerPicture.Parent = Frame
+GamerPicture.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GamerPicture.Position = UDim2.new(0, 200, 0, 95)
+GamerPicture.Size = UDim2.new(0, 97, 0, 97)
+GamerPicture.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+if shared.STREAM_SNIPER then
+   shared.STREAM_SNIPER:Destroy()
+end
+shared.STREAM_SNIPER = Screenguini
+
+local searching = false
+local confirm = false
+
+local function HttpGet(url)
+return pcall(HttpService.JSONDecode, HttpService, game:HttpGet(url))
+end
+
+local function Status(text, tout)
+StartButton.Text = text
+
+   if tout then
+       task.delay(tout, function()
+           if StartButton.Text == text then
+               searching = false
+               StartButton.Text = "Start"    
+           end
+       end)
+   end
+end
+
+local function getServers(id, cursor)
+   local fullurl = "https://games.roblox.com/v1/games/".. id .."/servers/Public?limit=100"
+   if cursor then
+       fullurl = "&cursor=".. cursor
+   end
+
+   return HttpGet(fullurl)
+end
+
+local function fetchThumbs(tokens)
+   local payload = {
+       Url = "https://thumbnails.roblox.com/v1/batch",
+       Headers = {
+           ["Content-Type"] = "application/json"
+       },
+       Method = "POST",
+
+       Body = {}
+   }
+
+   for _, token in ipairs(tokens) do
+       table.insert(payload.Body, {
+           requestId = "0:".. token ..":AvatarHeadshot:150x150:png:regular",
+           type = "AvatarHeadShot",
+           targetId = 0,
+           token = token,
+           format = "png",
+           size = "150x150"
+       })
+   end
+
+   payload.Body = HttpService:JSONEncode(payload.Body)
+   local result = syn.request(payload)
+   local s, data = pcall(HttpService.JSONDecode, HttpService, result.Body)
+   return s, data and data.data or data
+end
+
+local function teleport(placeId, guid)
+   TeleportService:TeleportToPlaceInstance(placeId, guid)
+end
+
+
+local threads = 30
+
+StartButton.MouseButton1Click:Connect(function()
+   if confirm then
+       confirm = false
+       searching = false
+       Status("Cancelled")
+       return
+   end
+
+   if searching then
+       confirm = true
+       local old = StartButton.Text
+       Status("Click again to confirm.")
+       task.delay(5, function()
+           if "Click again to confirm." == StartButton.Text then
+               confirm = false
+               StartButton.Text = old
+           end
+       end)
+       return
+   end
+
+   searching = true
+
+   -- User ID
+   Status("Getting user id...")
+
+   local s, Username, UserId = pcall(function() -- TODO FIX: fix for only numbers players
+       local userId = tonumber(UsernameBox.Text) or Players:GetUserIdFromNameAsync(UsernameBox.Text)
+       local username = Players:GetNameFromUserIdAsync(userId)
+
+return username, userId
+end)
+
+if not s then
+return Status("Username or UserId does not exist!", 3)
+end
+
+   local s, thumbUrl = pcall(Players.GetUserThumbnailAsync, Players, UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size150x150)
+
+   UsernameLabel.Text = Username
+   UserIdLabel.Text = UserId
+   GamerPicture.Image = s and thumbUrl or ""
+
+   Status("Getting user's thumbnail...")
+   local s, response = HttpGet("https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=" .. UserId .. "&format=Png&size=150x150&isCircular=false")
+   --local s, response = HttpGet("https://www.roblox.com/headshot-thumbnail/json?userId=" .. UserId .. "&width=150&height=150")
+   local thumbnail = s and response['data'][1].imageUrl
+
+   Status("Searching for (".. UserId ..")")
+   
+   -- Place ID
+   Status("Getting place id...")
+   
+   local placeId = tonumber(PlaceIdBox.Text)
+
+   if PlaceIdBox.Text:gsub("%s", "") == "" then
+       placeId = game.PlaceId
+
+   elseif not placeId then
+       Status("Invalid place id", 3)
+       return
+   end
+   
+   Status("Searching...")
+   local cursor = nil
+   local searched = 0
+   local maxSearchs = 0
+   local players = 0
+   -- Server search
+   while searching do
+       if not Screenguini or not Screenguini.Parent then
+           break
+       end
+       local s, result = getServers(placeId, cursor)
+
+       if s then
+           local servers = result.data
+           cursor = result.nextPageCursor
+           
+           if StartButton.Text:match("Searching") then
+               maxSearchs = maxSearchs + #servers
+               Status(searched .."/".. maxSearchs .." servers scanned, players found: ".. players)
+           end
+
+           -- Search all servers
+           for index, server in ipairs(servers) do
+               local function fetchServer()
+                   local s, thumbs = fetchThumbs(server.playerTokens)
+                   if s then
+                       players = players + #thumbs
+                       for _, playerThumb in ipairs(thumbs) do
+                           if playerThumb.imageUrl then
+                               if playerThumb.imageUrl == thumbnail then
+                                   searching = false
+                                   Status("Found player, teleporting...")
+
+                                   teleport(placeId, server.id)
+                                   local try = 0
+                                   Player.OnTeleport:Connect(function(teleportState)
+                                       if teleportState == Enum.TeleportState.Failed then
+                                           try = try + 1
+                                           Status("Teleport failed, try #".. try)
+                                           teleport(placeId, server.id)
+                                       end
+                                   end)
+                               end
+                           else
+                               Status("token failed, id:", playerThumb.requestId, playerThumb.state, playerThumb.errorMessage)
+                               --print("token failed, id:", playerThumb.requestId, playerThumb.state, playerThumb.errorMessage)
+                           end
+                       end
+                   else
+                       Status("token failed", s, thumb)
+                       --print("token failed", s, thumbs)
+                   end
+               end
+               searched = searched + 1
+               if index % threads ~= 0 then
+                   task.spawn(fetchServer)
+                   task.wait()
+
+               else
+                   fetchServer()
+               end
+
+               if searching then
+                   Status(searched .."/".. maxSearchs .." servers scanned, players found: ".. players)
+               end
+           end
+           
+           -- Player not found
+           if not cursor then
+               break
+           end
+       else
+           return Status("Failed to find servers", 3)
+       end
+
+       task.wait()
+   end
+   
+   if searching then
+       Status("Failed to find ".. Username ..", maybe in a vip server", 3)
+   end
+end)
+    end,
+ })
+
+
+ local Button = GUISS:CreateButton({
+    Name = "Goofy Ahh GUI",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/rf1ARVtu"))()
+
+    end,
+ })
+
+
+ local Button = GUISS:CreateButton({
+    Name = "plamen6789`s Entity Spawner (it will close this GUI)",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/plamen6789/DoorsEntitySpawner/main/EntitySpawner'))()
+
+    end,
+ })
+
+ local Rooms = Window:CreateTab("Rooms", 4483362458) -- Title, Image
+
+ local Button = Rooms:CreateButton({
+    Name = "Delete A-90 from Screen",
+    Callback = function()
+        local Plr = game.Players.LocalPlayer
+        local ModuleScripts = {
+           MainGame = Plr.PlayerGui.MainUI.Initiator.Main_Game,
+        }
+         
+        ModuleScripts.MainGame.RemoteListener.Modules["A90"].Name = "Baller"
+    end,
+ })
+
+ local Button = Rooms:CreateButton({
+    Name = "Delete A-90 Damage",
+    Callback = function()
+        local mt = getrawmetatable(game)
+        local old = mt.__namecall
+        setreadonly(mt,false)
+        mt.__namecall = newcclosure(function(self, ...)
+          local args = {...}
+          if getnamecallmethod() == 'FireServer' and self.Name == 'A90' then
+            args[1] = false
+          end
+          return old(self, unpack(args))
+        end)
+    end,
+ })
+
+ local Button = Rooms:CreateButton({
+    Name = "A-60 and A-120 notification",
+    Callback = function()
+        workspace.ChildAdded:Connect(function(Obj)
+            if Obj.Name:sub(1, 1) == "A" and Obj.Name ~= "AmbushMoving" then
+                game.StarterGui:SetCore("SendNotification", {
+                    Title = Obj.Name .. " Geldi ⚠️",
+                    Text = "Saklan",
+                    Duration = 5
+                })
+            end
+        end)
+        workspace.ChildRemoved:Connect(function(Obj)
+            if Obj.Name:sub(1, 1) == "A" and Obj.Name ~= "AmbushMoving" then
+                game.StarterGui:SetCore("SendNotification", {
+                    Title = Obj.Name .. " Gitti ✅",
+                    Text = "Dolaptan cikabilirsin",
+                    Duration = 5
+                })
+            end
+        end)
+    end,
+ })
+
+ local Button = Rooms:CreateButton({
+    Name = "Rooms Locker Highlighter",
+    Callback = function()
+        workspace.CurrentRooms.ChildAdded:Connect(function(Room)
+            Room:WaitForChild("Assets")
+            for i = 1, 10 do
+                for _,Obj in pairs(Room.Assets:GetChildren()) do
+                    if Obj.Name == "Rooms_Locker" then
+                        Instance.new("Highlight", Obj)
+                    end
+                end
+                task.wait(1)
+            end
+        end)
+    end,
+ })
+
+
+
+
+ local Button = Rooms:CreateButton({
+    Name = "Rooms Auto Walk",
+    Callback = function()
+        loadstring(game:HttpGet("https://" .. "raw.githubusercontent.com/DaRealGeo/roblox/master/rooms-autowalk"))()
+        --rooms auto walk and auto hide
+    end,
+ })
+
+ 
+ 
+ local scriptfyba = Window:CreateTab("YBA MAIN GAME", 4483362458) -- Title, Image
+
+    local Button = scriptfyba:CreateButton({
+        Name = "No cooldown",
+        Callback = function()
+            
+             getgenv().nocd = true
+             
+            while getgenv().nocd do wait()
+                pcall( function()
+                for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.HUD.Cooldowns.Frame:GetChildren()) do
+                    if v:IsA("ImageButton") then
+                        local name = v.Name
+            local args = {
+                [1] = "ResetCD",
+                [2] = name
+            }
+            game:GetService("Players").LocalPlayer.Character.RemoteEvent:FireServer(unpack(args))
+            end
+            end
+            end)
+            end
+        end,
+     })
+
+     local Button = scriptfyba:CreateButton({
+        Name = "BB GUI",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/zakater5/LuaRepo/main/YBA/v3.lua"))()
+        end,
+     })
+
+
+     
+     local Button = scriptfyba:CreateButton({
+        Name = "yba sucks ass GUI",
+        Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Tobias020108Back/YBA-AUT/main/YBA-GUI-Rewrite.lua"))()
+        end,
+     })
+
+
+     
+     local Button = scriptfyba:CreateButton({
+        Name = "CuHub GUI (will close this gui)",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/ItachiPvPUchiha/CuHub/main/yba.lua"))()
+        end,
+     })
+
+     local Button = scriptfyba:CreateButton({
+        Name = "invis",
+        Callback = function()
+          loadstring(game:HttpGet("https://raw.githubusercontent.com/lmmake/YBA/main/Invis.lua", true))()
+        end,
+     })
+
+
+local bapn = Window:CreateTab("Be A Parkour Ninja", 4483362458) -- Title, Image
+
+     local Button = bapn:CreateButton({
+        Name = "Bapn",
+        Callback = function()
+            game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Loaded", Text = "w = Enabled : p = disabled."})
+            local player = game.Players.LocalPlayer
+            local mouse = player:GetMouse()
+            
+            -- Settings
+            
+            bind = ""
+            bind2 = "w"
+            bind3 = "p"
+            
+            -- Script
+            
+            mouse.KeyDown:connect(function(key)
+            if key == bind then
+            player.Character.HumanoidRootPart.CFrame = CFrame.new(1236.09656, 137.906067, -172.128204)
+            end
+            end)
+            
+            mouse.KeyDown:connect(function(key2)
+            if key2 == bind2 then
+            _G.HeadSize = 17
+            _G.Disabled = true
+            
+            
+            if _G.Disabled then
+            for i,v in next, game:GetService('Players'):GetPlayers() do
+            if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+            pcall(function()
+            v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+            v.Character.HumanoidRootPart.Transparency = 0.7
+            v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Bright Red")
+            v.Character.HumanoidRootPart.Material = "Neon"
+            v.Character.HumanoidRootPart.CanCollide = false
+            end)
+            end
+            end
+            end
+            end
+            end)
+            
+            mouse.KeyDown:connect(function(key3)
+            if key3 == bind3 then
+            _G.HeadSize = 17
+            _G.Disabled = true
+            
+            
+            for i,v in next, game:GetService('Players'):GetPlayers() do
+            if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+            pcall(function()
+            v.Character.HumanoidRootPart.Size = Vector3.new(2, 2, 1)
+            v.Character.HumanoidRootPart.Transparency = 1
+            v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Medium stone grey")
+            v.Character.HumanoidRootPart.Material = "Plastic"
+            v.Character.HumanoidRootPart.CanCollide = false
+            end)
+            end
+            end
+            end
+            end)
+        end,
+     })
+
+
+Rayfield:LoadConfiguration()
+
+
+
+
+
+
