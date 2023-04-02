@@ -14,4 +14,5 @@ require(8247348648).ServerAdmin('metehan201010') --server adman
 require(4769713563).load('metehan201010') -- spectrum glitcher
 require(6274987259).v2('metehan201010') --cool but doesnt work
 require(7192763922).load("metehan201010") --hd admin
- require(4690715583)("metehan201010") --hostage 
+require(4690715583)("metehan201010") --hostage 
+require(12800239776).kick("Username") -- kick
